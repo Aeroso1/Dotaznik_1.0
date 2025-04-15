@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páteční program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h4>Co bys dnes chtěla dělat? Pokud máš čas a náladu, připravil jsem pro tebe krátký dotazník doufám, že se ti bude líbit.
+    Kdybys dnes čas neměla, tak snad alespoň zítra.
+    
+    Dotazník prosím neodesílej bohužel už jsem nestihl ho dokončit.
+    Stačí, když mi pošleš screenshot.
+    
+    Možnost „nemám čas“ tam nenajdeš ta totiž neexistuje.
+    Enjoy :)</h4>
+<style>
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400; /* Replace <weight> with a valid value */
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #title {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+    
+    #description {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #7f8c8d;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    
+    textarea {
+        height: 100px;
+        resize: vertical;
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    button:hover {
+        background: #2980b9;
+    }
+    
+    span {
+        font-size: 0.8em;
+        color: #7f8c8d;
+        font-weight: normal;
+    }
+    input[type="range"] {
+        width: 100%;
+        margin: 10px 0;
+        -webkit-appearance: none;
+        height: 8px;
+        background: #ddd;
+        border-radius: 4px;
+        outline: none;
+    }
+    
+    /* Slider Thumb (Handle) */
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #3498db;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    /* Display the slider value */
+    #slider-value {
+        display: inline-block;
+        margin-left: 10px;
+        font-weight: bold;
+        color: #3498db;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2 id="title">Dej mi vědět co by jsi dělala nejradši</h2>
+        <p class="describtion">Doufám že si tady najdeš aspoň něco co by tě mohlo bavit</p>
+        
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Jméno:</label>
+            <input type="text" id="name" name="name" placeholder="Zde napiš jméno" required
+    
+    </div>
+        <div class="form-group">
+            <label id="number-label" for="Kratom">Kolikrát budeme míchat:<span></span></label>
+            <input type="number" id="number" name="Kratom" min="0" max="5" placeholder="Kratom"
+
+        </div>
+        <div class="form-group"
+        <label id="number-label" for="Pivo">Kolik piveček dneska vypiješ:
+        </label>
+        <input type="number" id="number" name="Pivo" min="3" max="12" placeholder="Pivo">
+    </div>
+     <div class="form-group">
+        <label for="dropdown">Na jaký film by jsi šla?</label>
+        <select id="dropdown" name="kino">
+            <option disable selected>Vyber možnost</option>
+            <option value="minecraft">Minecraft</option>
+            <option value="plech">Na plech</option>
+            <option value="netflix">Netflix and chill</option>
+            <option value="zadna">Žádná z možností</option>
+        </select>
+     </div>
+     <div class="form-group">
+        <label for="satisfaction">Jak tě dotazník zatím baví?(1-10)</label>
+        <input
+        type="range"
+        id="satisfaction"
+        name="satisfaction"
+        min="1"
+        max="10"
+        step="1"
+        value="10"
+        >
+     </div>
+     <div class="form-group">
+        <p>Co bych měl přiště na dotazníku zlepšit? <span>(Vyber z možností)</span></p>
+        <label>
+            <input type="checkbox" name="zlepseni" value="design">Design
+            <input type="checkbox" name="zlepseni" value="text">Text
+            <input type="checkbox" name="zlepseni" value="moznosti">Lepší možnosti v dotazníku
+        </label>
+     </div>
+     <div class="form-group">
+        <label id="hospoda" name="hospoda">Napiš hospodu kam by jsi chtěla zajít:</label>
+        <input type="text" id="text" placeholder="Jméno hospody">
+     </div>
+     <div class="form-group">
+        <label for="jine">Nějaká možnost chyběla?</label>
+        <textarea id="jine" name="jine" placeholder="Cokoliv co chybělo v dotazníku"></textarea>
+     </div>
+     <div class="form-group">
+        <button type="submit" id="submit">Submit</button>
+    </div>
+</div>
+</body>
+</html>
